@@ -1,0 +1,72 @@
+.helloWorld-ptag {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-delay: 5000ms;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  padding: 5px 25px;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  padding: 5px 25px;
+  border: 2px dashed tomato;
+  align-self: center;
+  margin-top: 10px;
+}
+.helloWorld-h1tag:hover {
+  cursor: pointer;
+  color: tomato;
+}
+.helloWorld-h1tag {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 25px;
+  transition: 50ms;
+}
+.helloWorld-clicked {
+  position: absolute;
+  margin-top: -40vh;
+}
+.helloWorld-spantag {
+  font-style: italic;
+  color: #2e8bc0 !important;
+}
+.nextSpan {
+  font-style: italic;
+}
+.nextSpan:hover {
+  cursor: pointer;
+  color: #2e8bc0 !important;
+}
+.logicSpan {
+  color: #fad02c;
+}
+.helloworld-darkMode {
+  position: absolute !important;
+  margin-top: -65vh;
+  margin-left: 95vw;
+  align-self: flex-end;
+  padding: 3px 15px;
+  border: solid 1px #3c3c3c;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  transition: 350ms;
+}
+.helloworld-darkMode:hover {
+  background-color: #6c6c6c;
+  color: #fdfdfd;
+}
+.helloWorld-name {
+  padding: 10px 25px;
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

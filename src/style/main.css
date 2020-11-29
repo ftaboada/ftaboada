@@ -1,0 +1,15 @@
+body {
+  font-family: "Ubuntu";
+  font-weight: 100;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+h2 {
+  font-size: 23px;
+  font-weight: 300;
+}
+p {
+  font-size: 20px;
+}
