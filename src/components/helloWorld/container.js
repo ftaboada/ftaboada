@@ -2,18 +2,28 @@ import React, { useState } from "react";
 import View from "./views/view";
 import ClickView from "./views/clickView";
 import DarkMode from "./views/darkMode";
+import PopOver from "./views/popOver";
 
-const HelloWorld = ({ stage, setStage }) => {
+const HelloWorld = ({ stage, setStage, dark, setDark }) => {
   const [click, setClick] = useState(false);
-  const [dark, setDark] = useState(false);
+  const [logicHover, setLogicHover] = useState(false);
+
   const msg = {
     hello: "Hello World!",
-    p: "This is my first Portfolio!!!",
-    description: "my first steps was pure css ",
+    pBeforeClick: "This is my first Profile!!!",
+    pAfterClick: "then I realized...There is no limits",
+    description: "I'm Felipe Taboada",
+    descOnHover: "my first steps was pure css.",
+    descOnHoverSpan: "style",
+    phrase: "and a little of ",
+    logic: "logic",
+    popHover: "conditional rendering, and a sense of a project structure",
   };
+
   const handleNext = () => {
     setStage([false, true, false, false, false]);
   };
+
   return (
     <div
       style={
@@ -28,14 +38,18 @@ const HelloWorld = ({ stage, setStage }) => {
         setClick={setClick}
         handleNext={handleNext}
       />
-      {click ? (
-        <div>
-          <ClickView />
-          <DarkMode setDark={setDark} dark={dark} />
-        </div>
-      ) : (
-        <></>
-      )}
+      {
+        //above the main view fullscreen. bottom little divs, absolute position overlap.
+        click ? (
+          <div>
+            <ClickView msg={msg} setLogicHover={setLogicHover} />
+            <DarkMode setDark={setDark} dark={dark} />
+          </div>
+        ) : (
+          <></>
+        )
+      }
+      {logicHover ? <PopOver msg={msg} /> : <></>}
     </div>
   );
 };

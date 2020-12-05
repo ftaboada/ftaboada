@@ -40,6 +40,7 @@
 }
 .logicSpan {
   color: #fad02c;
+  z-index: 10;
 }
 .helloworld-darkMode {
   position: absolute !important;
@@ -58,6 +59,22 @@
 }
 .helloWorld-name {
   padding: 10px 25px;
+}
+.helloWorld-popHover {
+  position: absolute;
+  margin-top: -42.5vh;
+  margin-left: 150px;
+  height: 15px;
+  width: fit-content;
+  border: 1px solid #3c3c3c;
+  border-radius: 3px;
+  background-color: antiquewhite;
+  padding: 2px 15px;
+}
+.helloWorld-popHoverP {
+  font-size: 15px;
+  font-weight: 300;
+  color: #3c3c3c;
 }
 @keyframes pulse {
   0% {

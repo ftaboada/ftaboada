@@ -1,8 +1,13 @@
 import "./style.css"
-const ClickView=()=>{
+const ClickView=({msg, setLogicHover})=>{
+    const {phrase, logic} = msg
     return(
         <div className="helloWorld-clicked">
-            <p className="helloWorld-name">and a little of <span className="logicSpan">logic</span></p>
+            <p className="helloWorld-name">
+            {phrase}
+            <span className="logicSpan" onPointerEnter={()=>setLogicHover(true)} onPointerLeave={()=>setLogicHover(false)}>
+            {logic}
+            </span></p>
         </div>
     )
 }
