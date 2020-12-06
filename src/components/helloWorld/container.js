@@ -21,7 +21,7 @@ const HelloWorld = ({ stage, setStage, dark, setDark }) => {
   };
 
   const handleNext = () => {
-    setStage([false, true, false, false, false]);
+    setStage([false, true, false]);
   };
 
   return (

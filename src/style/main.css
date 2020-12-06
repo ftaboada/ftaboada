@@ -1,6 +1,8 @@
 body {
   font-family: "Ubuntu";
   font-weight: 100;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 h1 {
   font-size: 32px;

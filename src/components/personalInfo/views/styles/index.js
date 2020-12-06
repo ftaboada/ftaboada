@@ -3,7 +3,8 @@ import styled from "styled-components";
 const Card = styled.div`
   height: 50vh;
   width: 50vh;
-  box-shadow: 0px 0px 75px #000;
+  box-shadow: 0px 0px 75px ${(props) => props.shadow};
+  opacity: ${(props) => props.opacity};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,10 +16,22 @@ const Card = styled.div`
   &&:hover {
     background-color: ${(props) => props.hoverBkColor};
     cursor: pointer;
-
+    box-shadow: 0px 0px 175px ${(props) => props.shadow};
     Span {
       color: tomato;
     }
+  }
+  @media (max-height: 810px) {
+    height: 60vh;
+    width: 60vh;
+  }
+  @media (max-height: 700px) {
+    height: 70vh;
+    width: 70vh;
+  }
+  @media (max-height: 600px) {
+    height: 80vh;
+    width: 80vh;
   }
 `;
 const CardContainer = styled.div`
@@ -42,7 +55,7 @@ const GitLink = styled.a`
   margin-left: 35px;
   transition: 250ms;
   &&:hover {
-    filter: brightness(205%);
+    filter: drop-shadow(0px 0px 10px ${(props) => props.color});
   }
 `;
 const Info = styled.p`
@@ -83,18 +96,17 @@ const Span = styled.span`
 const Button = styled.button`
   font-size: 13.5px;
   border-radius: 4px;
-  border: 1px solid #2c2c2c;
-  box-shadow: 3px 3px 5px #1c1c1c;
-  opacity: ${(props) => props.opacity};
+  border: none;
+  box-shadow: 0px 0px 5px #1c1c1c;
   transition: 300ms;
-
+  opacity: ${(props) => props.opacity};
   background-color: ${(props) => props.bkColor};
   color: ${(props) => props.color};
   cursor: pointer;
   position: absolute;
   align-self: flex-end;
-  margin-top: 40vh;
-  margin-right: 15px;
+  margin-top: ${(props) => props.marginTop || "40vh"};
+  margin-right: ${(props) => props.margin || "15px"};
   padding: 5px 10px;
   &&:hover {
     color: ${(props) => props.bkColor};
@@ -106,19 +118,20 @@ const Logo = styled.img`
   width: 55px;
   object-fit: ${(props) => props.fit};
   transition: 300ms;
+  transition-delay: ${(props) => props.delay};
+  opacity: ${(props) => props.opacity};
   filter: grayscale(100%) brightness(115%);
 
   &&:hover {
     filter: grayscale(0%) brightness(100%)
-      drop-shadow(0px 0px 5px ${(props) => props.shadow});
+      drop-shadow(0px 0px 15px ${(props) => props.shadow});
   }
 `;
 const LogosContainer = styled.picture`
   display: flex;
   flex-wrap: wrap;
-  width: 95%;
-  align-self: center;
-  margin-left: 5vh;
+  width: 90%;
+  align-self: flex-end;
 `;
 const PopOver = styled.p`
   background-color: antiquewhite;
@@ -134,6 +147,26 @@ const PopOver = styled.p`
   transition: 250ms;
   z-index: 100;
 `;
+const BackButton = styled.button`
+  width: 35px;
+  height: 17px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 5px #1c1c1c;
+  transition: 300ms;
+  background-color: ${(props) => props.bkColor};
+  color: ${(props) => props.color};
+  cursor: pointer;
+  position: absolute;
+  align-self: flex-start;
+  margin-top: -35vh;
+  margin-left: 35px;
+  padding: 2px 3px;
+  &&:hover {
+    color: ${(props) => props.bkColor};
+    background-color: ${(props) => props.color};
+  }
+`;
 export {
   Card,
   CardContainer,
@@ -146,4 +179,5 @@ export {
   Logo,
   LogosContainer,
   PopOver,
+  BackButton,
 };

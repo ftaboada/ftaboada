@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
 import RandomColor from "../../functions/randomColor";
-
 import View from "./views/view";
-const PersonalInfo = ({ dark, setStage }) => {
-  const [bkColor, setBkColor] = useState("");
+
+const PersonalInfo = ({ dark, setStage, bkColor, setBkColor }) => {
   const [side, setSide] = useState(false);
   const [opacity, setOpacity] = useState(0);
   const [imgOp, setImgOp] = useState(0);
   const [popOver, setPopOver] = useState(false);
+  const [delay, setDelay] = useState("300ms");
+  const [close, setClose] = useState(false);
+
   useEffect(() => {
     changeBkColor();
     setOpacity(1);
     setImgOp(!side ? 1 : 0);
+    setDelay("300ms");
   }, [side]);
   const changeBkColor = () => {
     if (dark) {
@@ -19,6 +22,12 @@ const PersonalInfo = ({ dark, setStage }) => {
     } else {
       setBkColor(RandomColor("CDFF"));
     }
+  };
+  const nextStage = async () => {
+    setClose(true);
+    await setTimeout(() => {
+      setStage([false, false, true]);
+    }, 400);
   };
   return (
     <View
@@ -33,6 +42,10 @@ const PersonalInfo = ({ dark, setStage }) => {
       setPopOver={setPopOver}
       popOver={popOver}
       setStage={setStage}
+      delay={delay}
+      setDelay={setDelay}
+      close={close}
+      nextStage={nextStage}
     />
   );
 };

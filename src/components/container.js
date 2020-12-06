@@ -1,24 +1,14 @@
 import React, { useState } from "react";
 import HelloWorld from "./helloWorld";
 import PersonalInfo from "./personalInfo";
+import Contact from "./contact";
 
 const Container = () => {
-  const [stage, setStage] = useState([true, false, false, false, false]);
+  const [stage, setStage] = useState([true, false, false]);
   const [dark, setDark] = useState(false);
-
+  const [bkColor, setBkColor] = useState("");
   return (
-    <div
-      syle={
-        dark
-          ? {
-              backgroundColor: "#2c2c2c",
-              height: "100vh",
-              width: "100vw",
-              display: "block",
-            }
-          : {}
-      }
-    >
+    <div>
       {stage[0] ? (
         <HelloWorld
           setStage={setStage}
@@ -29,7 +19,21 @@ const Container = () => {
       ) : (
         <></>
       )}
-      {stage[1] ? <PersonalInfo dark={dark} setStage={setStage} /> : <></>}
+      {stage[1] ? (
+        <PersonalInfo
+          dark={dark}
+          setStage={setStage}
+          bkColor={bkColor}
+          setBkColor={setBkColor}
+        />
+      ) : (
+        <></>
+      )}
+      {stage[2] ? (
+        <Contact bkColor={bkColor} dark={dark} setStage={setStage} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
