@@ -105,8 +105,8 @@ const Button = styled.button`
   cursor: pointer;
   position: absolute;
   align-self: flex-end;
-  margin-top: ${(props) => props.marginTop + "vh" || "40vh"};
-  margin-right: ${(props) => props.margin + "px" || "15px"};
+  margin-top: ${(props) => (props.marginTop ? props.marginTop + "vh" : "40vh")};
+  margin-right: ${(props) => (props.margin ? props.margin + "px" : "15px")};
   @media (max-width: 900px) {
     margin-top: ${(props) => props.marginTop || "40vh"};
     margin-right: ${(props) =>
