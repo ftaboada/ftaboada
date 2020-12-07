@@ -76,7 +76,7 @@ const Info = styled.p`
         ? props.marginTop === "-25vh;"
           ? "-40vh"
           : "30vh"
-        : "3vh"};
+        : "30vh"};
   }
 `;
 const Img = styled.img`
@@ -90,6 +90,9 @@ const Img = styled.img`
   width: 133px;
   position: absolute;
   object-fit: cover;
+  @media (max-height: 700px) {
+    margin-top: -22vh;
+  }
 `;
 const Title = styled.h1`
   display: block;
@@ -101,7 +104,7 @@ const Title = styled.h1`
   transition-delay: 300ms;
   @media (max-height: 700px) {
     margin-top: ${(props) =>
-      props.marginTop ? props.marginTop - 20 + "vh" : "0px"};
+      props.marginTop ? props.marginTop - 20 + "vh" : "-20vh"};
   }
 `;
 const Span = styled.span`
@@ -126,6 +129,9 @@ const Button = styled.button`
     margin-top: ${(props) => props.marginTop || "40vh"};
     margin-right: ${(props) =>
       props.margin ? props.margin + 30 + "px" : "15px"};
+  }
+  @media (max-height: 700px) {
+    margin-top: ${(props) => "60vh" || "60vh"};
   }
   padding: 5px 10px;
   &&:hover {
