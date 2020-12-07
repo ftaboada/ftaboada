@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ftaboada/static/css/main.ead6ac84.chunk.css",
-    "main.js": "/ftaboada/static/js/main.f1dabaf0.chunk.js",
-    "main.js.map": "/ftaboada/static/js/main.f1dabaf0.chunk.js.map",
+    "main.css": "/ftaboada/static/css/main.31e54987.chunk.css",
+    "main.js": "/ftaboada/static/js/main.420391b0.chunk.js",
+    "main.js.map": "/ftaboada/static/js/main.420391b0.chunk.js.map",
     "runtime-main.js": "/ftaboada/static/js/runtime-main.b8209bc2.js",
     "runtime-main.js.map": "/ftaboada/static/js/runtime-main.b8209bc2.js.map",
     "static/js/2.5d666a2f.chunk.js": "/ftaboada/static/js/2.5d666a2f.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.500a45a3.chunk.js": "/ftaboada/static/js/3.500a45a3.chunk.js",
     "static/js/3.500a45a3.chunk.js.map": "/ftaboada/static/js/3.500a45a3.chunk.js.map",
     "index.html": "/ftaboada/index.html",
-    "static/css/main.ead6ac84.chunk.css.map": "/ftaboada/static/css/main.ead6ac84.chunk.css.map",
+    "static/css/main.31e54987.chunk.css.map": "/ftaboada/static/css/main.31e54987.chunk.css.map",
     "static/js/2.5d666a2f.chunk.js.LICENSE.txt": "/ftaboada/static/js/2.5d666a2f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b8209bc2.js",
     "static/js/2.5d666a2f.chunk.js",
-    "static/css/main.ead6ac84.chunk.css",
-    "static/js/main.f1dabaf0.chunk.js"
+    "static/css/main.31e54987.chunk.css",
+    "static/js/main.420391b0.chunk.js"
   ]
 }
