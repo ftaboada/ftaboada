@@ -11,7 +11,11 @@ const Contact = ({ bkColor, dark, setDark, setStage, setBkColor }) => {
   const [disableButton, setDisableButton] = useState(true);
   const [len, setLen] = useState(0);
   const [showPopOver, setShowPopOver] = useState({ msg: null, state: false });
-
+  useEffect(() => {
+    if (window.innerWidth <= 600) {
+      setDisplayForm(true);
+    }
+  }, []);
   useEffect(() => {
     if (email && name && msg && len > 0) {
       setDisableButton(false);

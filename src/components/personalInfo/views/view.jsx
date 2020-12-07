@@ -18,7 +18,7 @@ return(
             color={color} onClick={()=>setSide(!side)}><ArrowBackIosIcon style={{fontSize:"12px"}}/></BackButton>}
             {!side?
             <Img src={src} opacity={imgOp}/>:
-            <Title position={"absolute;"} marginTop={"-35vh;"}>Just <Span> Javascript <br/></Span></Title>
+            <Title position={"absolute;"} marginTop={-35}>Just <Span> Javascript <br/></Span></Title>
             }{!side?
             <Title opacity={opacity}>I love to make <Span>stuff<br/> </Span> for the web</Title>:
             <></>}

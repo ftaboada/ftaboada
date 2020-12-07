@@ -57,6 +57,9 @@ const GitLink = styled.a`
   &&:hover {
     filter: drop-shadow(0px 0px 10px ${(props) => props.color});
   }
+  @media (max-height: 700px) {
+    margin-top: 60vh;
+  }
 `;
 const Info = styled.p`
   opacity: ${(props) => props.opacity};
@@ -67,6 +70,14 @@ const Info = styled.p`
   width: 80%;
   transition: 300ms;
   transition-delay: 250ms;
+  @media (max-height: 700px) {
+    margin-top: ${(props) =>
+      props.marginTop !== "3vh;"
+        ? props.marginTop === "-25vh;"
+          ? "-40vh"
+          : "30vh"
+        : "3vh"};
+  }
 `;
 const Img = styled.img`
   opacity: ${(props) => props.opacity};
@@ -84,10 +95,14 @@ const Title = styled.h1`
   display: block;
   font-size: 23px;
   position: ${(props) => props.position}||inherit;
-  margin-top: ${(props) => props.marginTop}||0px;
+  margin-top: ${(props) => (props.marginTop ? props.marginTop + "vh" : "0px")};
   opacity: ${(props) => props.opacity};
   transition: 300ms;
   transition-delay: 300ms;
+  @media (max-height: 700px) {
+    margin-top: ${(props) =>
+      props.marginTop ? props.marginTop - 20 + "vh" : "0px"};
+  }
 `;
 const Span = styled.span`
   font-style: italic;
@@ -153,6 +168,9 @@ const PopOver = styled.p`
   margin-left: 65px;
   transition: 250ms;
   z-index: 100;
+  @media (max-height: 700px) {
+    margin-top: 53vh;
+  }
 `;
 const BackButton = styled.button`
   width: 35px;
@@ -172,6 +190,9 @@ const BackButton = styled.button`
   &&:hover {
     color: ${(props) => props.bkColor};
     background-color: ${(props) => props.color};
+  }
+  @media (max-height: 700px) {
+    margin-top: -60vh;
   }
 `;
 export {
