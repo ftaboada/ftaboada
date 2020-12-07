@@ -11,6 +11,9 @@ const SwitchContainer = styled.div`
   align-items: center;
   transition: 300ms;
   z-index: 100;
+  @media (max-width: 900px) {
+    margin-left: -80vw;
+  }
 `;
 const Bar = styled.div`
   height: 5px;

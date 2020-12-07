@@ -12,6 +12,7 @@
   border: 2px dashed tomato;
   align-self: center;
   margin-top: 10px;
+  z-index: 110;
 }
 .helloWorld-h1tag:hover {
   cursor: pointer;

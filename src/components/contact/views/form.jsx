@@ -18,8 +18,8 @@ const Form=({displayForm, dark,  validEmail, validName, validMsg, handleEmail,ha
         opacity={displayForm?"1":"0"}
         color={dark?"#3c3c3c":"#dfdff1"}
         bkColor={!dark?"#3c3c3c":"#dfdff1"}
-        margin="0vw" 
-        marginTop="57vh"
+        margin={0} 
+        marginTop={57}
         >Send</Button>
         </Formularie>
     )

@@ -21,7 +21,7 @@ const View=({bkColor, dark, setStage, displayForm, setDisplayForm, validEmail, v
         <DarkSwitch dark={dark} setDark={setDark} setBkColor={setBkColor}/>
         {showPopOver.state?<Pop bkColor={!dark?"#3c3c3c":"#cfcfcf"} color={dark?"#3c3c3c":"#cfcfcf"}>{showPopOver.msg} <Decor></Decor></Pop>:<></>}
         <Three setDisplayForm={setDisplayForm} displayForm={displayForm} dark={dark} bkColor={bkColor}/>
-        <FormContainer width={displayForm?"30vw":"0px"} color={!dark?"#3c3c3c":"#dfdff1"}>
+        <FormContainer width={displayForm?30:0} color={!dark?"#3c3c3c":"#dfdff1"}>
             <Form
             displayForm={displayForm}
             setDisplayForm={setDisplayForm}

@@ -105,8 +105,13 @@ const Button = styled.button`
   cursor: pointer;
   position: absolute;
   align-self: flex-end;
-  margin-top: ${(props) => props.marginTop || "40vh"};
-  margin-right: ${(props) => props.margin || "15px"};
+  margin-top: ${(props) => props.marginTop + "vh" || "40vh"};
+  margin-right: ${(props) => props.margin + "px" || "15px"};
+  @media (max-width: 900px) {
+    margin-top: ${(props) => props.marginTop || "40vh"};
+    margin-right: ${(props) =>
+      props.margin ? props.margin + 30 + "px" : "15px"};
+  }
   padding: 5px 10px;
   &&:hover {
     color: ${(props) => props.bkColor};

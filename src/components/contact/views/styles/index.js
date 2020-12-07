@@ -29,9 +29,13 @@ const BackButton = styled.button`
     color: ${(props) => props.bkColor};
     background-color: ${(props) => props.color};
   }
+  @media (max-width: 900px) {
+    margin-right: 0px;
+    margin-left: -80vw;
+  }
 `;
 const FormContainer = styled.div`
-  width: ${(props) => props.width};
+  width: ${(props) => props.width + "vw"};
   position: absolute;
   height: 100vh;
   transition: 500ms;
@@ -40,6 +44,14 @@ const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 900px) {
+    width: ${(props) => props.width * 2 + "vw"};
+    margin-left: 40vw;
+  }
+  @media (max-width: 600px) {
+    width: ${(props) => Math.floor(props.width * 3.334) + "vw"};
+    margin-left: 0vw;
+  }
 `;
 const Formularie = styled.form`
   position: absolute;
@@ -54,15 +66,26 @@ const Formularie = styled.form`
   align-items: flex-end;
   flex-direction: column;
   width: 100%;
+  @media (max-width: 900px) {
+    align-items: center;
+    margin-right: 0px;
+  }
 `;
 const Input = styled.input`
   margin: 10px 0px;
   width: 15vw;
+  @media (max-width: 900px) {
+    width: 40vw;
+  }
 `;
 const TextArea = styled.textarea`
   margin: 10px 0px;
   width: 15vw;
   height: 12.5vw;
+  @media (max-width: 900px) {
+    width: 40vw;
+    height: 20vh;
+  }
 `;
 const Title = styled.h1`
   display: block;
