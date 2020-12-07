@@ -15,7 +15,7 @@ const BackButton = styled.button`
   border-radius: 4px;
   border: none;
   box-shadow: 0px 0px 5px #1c1c1c;
-  transition: 300ms;
+  transition: 300ms ease-in-out;
   background-color: ${(props) => props.bkColor};
   color: ${(props) => props.color};
   cursor: pointer;
@@ -40,17 +40,12 @@ const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  &&:hover {
-    Span {
-      color: "tomato";
-    }
-  }
 `;
 const Formularie = styled.form`
   position: absolute;
   opacity: ${(props) => props.opacity};
   margin-right: ${(props) => props.margin};
-  transition: 300ms;
+  transition: 300ms ease-in;
   transition-delay: ${(props) => props.delay};
   color: ${(props) => props.color};
   font-size: 28px;
@@ -71,12 +66,40 @@ const TextArea = styled.textarea`
 `;
 const Title = styled.h1`
   display: block;
+  transition: 300ms;
 `;
 const Validator = styled.p`
   display: block;
   font-size: ${(props) => props.size || "14px"};
   color: ${(props) => props.color};
   transition: 300ms;
+`;
+const Pop = styled.h2`
+  position: absolute;
+  display: block;
+  width: 250px;
+  margin-top: -85vh;
+  color: ${(props) => props.color};
+  background-color: ${(props) => props.bkColor};
+  padding: 10px 25px;
+  font-weigth: 500;
+  z-index: 110;
+  border-radius: 8px 0px 0px 0px;
+  transition: 300ms;
+  text-align: center;
+`;
+const Decor = styled.div`
+  position: inherit;
+  display: block;
+  background-color: tomato;
+  height: 3px;
+  margin-left: -25px;
+  margin-top: 7px;
+  transition: 5000ms;
+  transition-delay: 100ms;
+  width: 100%;
+  filter: drop-shadow(0px 0px 15px tomato);
+  z-index: 120;
 `;
 export {
   ContactContainer,
@@ -87,4 +110,6 @@ export {
   TextArea,
   Title,
   Validator,
+  Pop,
+  Decor,
 };

@@ -28,6 +28,7 @@ export default function Model({dark, setDisplayForm, displayForm}){
         >
                 <torusKnotBufferGeometry
                     args={[15, 5, 256, 128]}
+                   
                 />
                  <ambientLight intensity={3}
                  color={"white"} />

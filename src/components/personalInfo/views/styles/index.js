@@ -130,8 +130,10 @@ const Logo = styled.img`
 const LogosContainer = styled.picture`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 90%;
-  align-self: flex-end;
+  align-self: center;
 `;
 const PopOver = styled.p`
   background-color: antiquewhite;

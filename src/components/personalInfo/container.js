@@ -20,7 +20,7 @@ const PersonalInfo = ({ dark, setStage, bkColor, setBkColor }) => {
     if (dark) {
       setBkColor(RandomColor("1234"));
     } else {
-      setBkColor(RandomColor("CDFF"));
+      setBkColor(RandomColor("ACDF"));
     }
   };
   const nextStage = async () => {

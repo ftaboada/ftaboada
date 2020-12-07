@@ -30,7 +30,13 @@ const Container = () => {
         <></>
       )}
       {stage[2] ? (
-        <Contact bkColor={bkColor} dark={dark} setStage={setStage} />
+        <Contact
+          bkColor={bkColor}
+          dark={dark}
+          setDark={setDark}
+          setStage={setStage}
+          setBkColor={setBkColor}
+        />
       ) : (
         <></>
       )}
