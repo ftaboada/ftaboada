@@ -86,12 +86,14 @@ const Img = styled.img`
   rotate: 2.7deg;
   border-radius: 50%;
   margin-top: -44.51vh;
+  -webkit-margin-before: -22.51vh;
   height: 133px;
   width: 133px;
   position: absolute;
   object-fit: cover;
   @media (max-height: 700px) {
     margin-top: -22vh;
+    -webkit-margin-before: -10.51vh;
   }
 `;
 const Title = styled.h1`
