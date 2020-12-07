@@ -44,7 +44,7 @@ const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 900px) {
+  @media (max-width: 1300px) {
     width: ${(props) => props.width * 2 + "vw"};
     margin-left: 40vw;
   }
@@ -66,7 +66,7 @@ const Formularie = styled.form`
   align-items: flex-end;
   flex-direction: column;
   width: 100%;
-  @media (max-width: 900px) {
+  @media (max-width: 1300px) {
     align-items: center;
     margin-right: 0px;
   }
@@ -74,7 +74,8 @@ const Formularie = styled.form`
 const Input = styled.input`
   margin: 10px 0px;
   width: 15vw;
-  @media (max-width: 900px) {
+  z-index: 1110;
+  @media (max-width: 1300px) {
     width: 40vw;
   }
 `;
@@ -82,7 +83,8 @@ const TextArea = styled.textarea`
   margin: 10px 0px;
   width: 15vw;
   height: 12.5vw;
-  @media (max-width: 900px) {
+  z-index: 1110;
+  @media (max-width: 1300px) {
     width: 40vw;
     height: 20vh;
   }
