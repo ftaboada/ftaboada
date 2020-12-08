@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ftaboada/static/css/main.31e54987.chunk.css",
-    "main.js": "/ftaboada/static/js/main.350c8825.chunk.js",
-    "main.js.map": "/ftaboada/static/js/main.350c8825.chunk.js.map",
+    "main.js": "/ftaboada/static/js/main.a884475b.chunk.js",
+    "main.js.map": "/ftaboada/static/js/main.a884475b.chunk.js.map",
     "runtime-main.js": "/ftaboada/static/js/runtime-main.b8209bc2.js",
     "runtime-main.js.map": "/ftaboada/static/js/runtime-main.b8209bc2.js.map",
     "static/js/2.5d666a2f.chunk.js": "/ftaboada/static/js/2.5d666a2f.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b8209bc2.js",
     "static/js/2.5d666a2f.chunk.js",
     "static/css/main.31e54987.chunk.css",
-    "static/js/main.350c8825.chunk.js"
+    "static/js/main.a884475b.chunk.js"
   ]
 }
