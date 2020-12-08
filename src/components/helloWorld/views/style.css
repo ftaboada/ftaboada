@@ -54,6 +54,16 @@
   background-color: #fcfcfc;
   transition: 350ms;
 }
+@media (max-width: 1000px) {
+  .helloworld-darkMode {
+    margin-left: 80vw;
+  }
+}
+@media (max-width: 600px) {
+  .helloworld-darkMode {
+    margin-left: 70vw;
+  }
+}
 .helloworld-darkMode:hover {
   background-color: #6c6c6c;
   color: #fdfdfd;

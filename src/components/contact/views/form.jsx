@@ -12,7 +12,7 @@ const Form=({displayForm, dark,  validEmail, validName, validMsg, handleEmail,ha
         <Input name="name" placeholder="name..." onChange={handleName}></Input>
         <Validator color={validName?"":"tomato"}>{validName?"a valid name please...":"I'm sure you're not Elon's Musk son"}</Validator>
         <TextArea name="msg" placeholder="message..." onChange={handleMsg} ></TextArea>
-        <Validator color={validMsg?"":"tomato"}>{!validMsg?"at least 2 lines":"that seems to be ok"}</Validator>
+        <Validator color={validMsg?"":"tomato"}>{!validMsg?"at least 20 characters":"that seems to be ok"}</Validator>
         <Button
         disabled={disableButton} 
         opacity={displayForm?"1":"0"}

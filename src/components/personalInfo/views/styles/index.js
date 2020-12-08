@@ -133,7 +133,10 @@ const Button = styled.button`
       props.margin ? props.margin + 30 + "px" : "15px"};
   }
   @media (max-height: 700px) {
-    margin-top: ${(props) => "60vh" || "60vh"};
+    margin-top: ${(props) => (props.marginTop === 57 ? "80vh" : "60vh")};
+  }
+  @media (max-height: 600px) {
+    margin-top: ${(props) => (props.marginTop === 57 ? "90vh" : "60vh")};
   }
   padding: 5px 10px;
   &&:hover {

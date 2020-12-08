@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HelloWorld from "./helloWorld";
 import PersonalInfo from "./personalInfo";
 import Contact from "./contact";
@@ -7,6 +7,9 @@ const Container = () => {
   const [stage, setStage] = useState([true, false, false]);
   const [dark, setDark] = useState(false);
   const [bkColor, setBkColor] = useState("");
+  useEffect(() => {
+    document.title = "Felipe Taboada";
+  }, []);
   return (
     <div>
       {stage[0] ? (

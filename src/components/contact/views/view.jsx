@@ -6,7 +6,7 @@ import DarkSwitch from "./darkSwitch";
 import Form from "./form"
 
 
-const View=({bkColor, dark, setStage, displayForm, setDisplayForm, validEmail, validName, validMsg, handleEmail,handleName, handleMsg, disableButton, setDark,setBkColor, handleSubmit, showPopOver,})=>{
+const View=({bkColor, dark, setStage, displayForm, setDisplayForm, validEmail, validName, validMsg, handleEmail,handleName, handleMsg, disableButton, setDark,setBkColor, handleSubmit, showPopOver})=>{
     
     return (
         <ContactContainer bkColor={bkColor}>
